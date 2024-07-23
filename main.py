@@ -27,7 +27,7 @@ if raycast_in_line("Will there be a raycast in the line (Y/N): "):
                 f"\033[35mexecute \033[34manchored eyes positioned \033[32m^ ^ ^ {steps}\n"
                 "\033[35mreturn \033[32m1\n\n"
                 "\033[0mraycast/start.mcfunction\n"
-                f"\033[35mscoreboard \033[34mplayers set \033[36m#distance \033[0mmain_score \033[32m{distance*5}\n"
+                f"\033[35mscoreboard \033[34mplayers set \033[36m#distance \033[0mmain_score \033[32m(int{distance})/{step}\n"
                 "\033[35mexecute \033[34manchored eyes positioned \033[32m^ ^ ^ \033[34mrun \033[35mfunction \033[33mnamespace:raycast/main\n\n"
                 "\033[0mraycast/main.mcfunction\n"
                 "\033[35mscoreboard \033[34mplayers remove \033[36m#distance \033[0mmain_score \033[32m1\n"
@@ -41,7 +41,7 @@ if raycast_in_line("Will there be a raycast in the line (Y/N): "):
 else:
      result = (
                 "\033[0mraycast/start.mcfunction\n"
-                f"\033[35mscoreboard \033[34mplayers set \033[36m#distance \033[0mmain_score \033[32m{distance*5}\n"
+                f"\033[35mscoreboard \033[34mplayers set \033[36m#distance \033[0mmain_score \033[32m(int{distance})/{step}\n"
                 "\033[35mexecute \033[34manchored eyes positioned \033[32m^ ^ ^ \033[34mrun \033[35mfunction \033[33mnamespace:raycast/main\n\n"
                 "\033[0mraycast/main.mcfunction\n"
                 "\033[35mscoreboard \033[34mplayers remove \033[36m#distance \033[0mmain_score \033[32m1\n"
